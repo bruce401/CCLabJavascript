@@ -1,0 +1,100 @@
+<!DOCTYPE html><html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>JS Final</title>
+<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="style.css"/>
+
+
+</head>
+<body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
+	<script src="js/clmtrackr-dev/examples/ext_js/dat.gui.min.js"></script>
+	<script src="js/clmtrackr-dev/examples/ext_js/utils.js"></script>
+	<script src="js/clmtrackr-dev/examples/ext_js/jsfeat-min.js"></script>
+	<script src="js/clmtrackr-dev/examples/ext_js/frontalface.js"></script>
+	<script src="js/clmtrackr-dev/examples/ext_js/jsfeat_detect.js"></script>
+	<script src="js/clmtrackr-dev/examples/ext_js/numeric-1.2.6.min.js"></script>
+	<script src="js/clmtrackr-dev/examples/ext_js/mosse.js"></script>
+	<script src="js/clmtrackr-dev/examples/ext_js/left_eye_filter.js"></script>
+	<script src="js/clmtrackr-dev/examples/ext_js/right_eye_filter.js"></script>
+	<script src="js/clmtrackr-dev/examples/ext_js/nose_filter.js"></script>
+	<script src="js/clmtrackr-dev/models/model_pca_20_svm.js"></script>
+	<script src="js/clmtrackr-dev/js/clm.js"></script>
+	<script src="js/clmtrackr-dev/js/svmfilter_webgl.js"></script>
+	<script src="js/clmtrackr-dev/js/svmfilter_fft.js"></script>
+	<script src="js/clmtrackr-dev/js/mossefilter.js"></script>
+	<script src="js/clmtrackr-dev/examples/ext_js/Stats.js"></script>
+	<script src="js/clmtrackr-dev/js/face_deformer.js"></script>
+	<script src="//www.WebRTC-Experiment.com/RecordRTC.js"></script>
+	<script src="//www.webrtc-experiment.com/screenshot.js"></script>
+
+
+<div class="content">
+<h2>Facemask</h2>
+<div id="container">
+<!-- video here -->
+<video id="videoel" width="500" height="400" autoplay loop></video>
+
+<canvas id="overlay" width="500" height="400"></canvas>
+<canvas id="webgl" width="500" height="400"></canvas>
+
+<!-- need a canvas element for output -->
+<!-- <canvas id="output"></canvas> -->
+</div>
+<br/>
+<div id="controlz">
+<input class="btn" type="button" value="loading video" disabled="disabled" onclick="startVideo()" id="startbutton"></input>
+
+<!-- <input class="recordbtn" type="button" value="record" onclick="record(this)"></input>
+<input class="stopbtn" type="button" value="stop" onclick="stop(this)"></input> -->
+
+<select name="mask" id="selectmask">
+	<option value="0">Normal</option>
+	<option value="1">Mona Lisa</option>
+	<option value="2">Ironman</option>
+	<option value="3">Skull mask</option>
+	<option value="4">Sean Connery</option>
+	<option value="5">Audrey</option>
+	<option value="6">Cage</option>
+</select>
+</div>
+
+<!-- <div id="record">
+	<input type="button" value="RECORD" onclick="record(this)">
+	<input type="button" value="STOP RECORDING" onclick="stop(this)">
+</div> -->
+<!-- <select name="filters" id="selectfilter">
+	<option value="0">none</option>
+	<option value="1">grayscale</option>
+	<option value="2">sepia</option>
+	<option value="3">blur</option>
+	<option value="4">brightness</option>
+	<option value="5">contrast</option>
+	<option value="6">hue-rotate</option>
+	<option value="7">hue-rotate2</option>
+	<option value="8">hue-rotate3</option>
+	<option value="9">saturate</option>
+	<option value="10">invert</option>
+</select> -->
+
+<!-- mask images -->
+<img id="average" class="masks" src="js/clmtrackr-dev/examples/media/average.bmp"></img>
+<img id="monalisa" class="masks" src="js/clmtrackr-dev/examples/media/joconde.jpg"></img>
+<img id="ironman" class="masks" src="js/clmtrackr-dev/examples/media/ironman.jpg"></img>
+<img id="sean" class="masks" src="js/clmtrackr-dev/examples/media/SeanConnery.jpg"></img>
+<img id="skull" class="masks" src="js/clmtrackr-dev/examples/media/skullmask.jpg"></img>
+<img id="audrey" class="masks" src="js/clmtrackr-dev/examples/media/audrey.jpg"></img>
+<img id="cage2" class="masks" src="js/clmtrackr-dev/examples/media/cage.jpg"></img>
+
+
+<script type="text/javascript" src="js/main.js"></script>
+<!-- /* clmtrackr libraries */ -->
+
+
+
+</div>
+</body>
+
+
+</html>
